@@ -8,7 +8,7 @@ function CountDownTimer() {
   const [countdownReached, setCountdownReached] = useState(false); // State for countdown reached
 
   useEffect(() => {
-    const targetDate = new Date("2023-09-26T16:20:00").getTime();
+    const targetDate = new Date("2023-09-27T12:20:00").getTime();
 
     const intervalId = setInterval(() => {
       const now = new Date().getTime();
