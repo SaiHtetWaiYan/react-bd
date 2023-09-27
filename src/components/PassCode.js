@@ -69,15 +69,16 @@ const PassCode = () => {
     <>
       {success ? (
         <div>
-          <div className={`${isAudioPlaying ? "" : "hidden"}`}>
-            <div className="firework"></div>
-            <div className="firework"></div>
-            <div className="firework"></div>
-            <h1 className="cake-title animate-charcter ">Happy Birthday!</h1>
-          </div>
-          <div className={`${isAudioPlaying ? "hidden" : ""}`}>
+          {isAudioPlaying ? (
+            <div>
+              <div className="firework"></div>
+              <div className="firework"></div>
+              <div className="firework"></div>
+              <h1 className="cake-title animate-charcter ">Happy Birthday!</h1>
+            </div>
+          ) : (
             <h1 className="cake-title center-text">Touch Flame</h1>
-          </div>
+          )}
           <div className="cake centerme">
             <div className="plate"></div>
             <div className="layer layer-bottom"></div>
@@ -88,10 +89,14 @@ const PassCode = () => {
             <div className="drip drip2"></div>
             <div className="drip drip3"></div>
             <div className="candle">
-              <div
-                className={`flame ${isFlameVisible ? "" : "hidden"}`}
-                onClick={handleFlameClick}
-              ></div>
+              {isAudioPlaying ? (
+                <div className="flame"></div>
+              ) : (
+                <div
+                  className={`flame ${isFlameVisible ? "" : "hidden"}`}
+                  onClick={handleFlameClick}
+                ></div>
+              )}
             </div>
           </div>
         </div>
