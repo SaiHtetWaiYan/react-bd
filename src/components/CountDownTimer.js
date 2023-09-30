@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import PassCode from "./PassCode";
+import Chatbot from "./Chat";
 function CountDownTimer() {
   const [days, setDays] = useState("00");
   const [hours, setHours] = useState("00");
@@ -47,8 +47,9 @@ function CountDownTimer() {
     <div className="flex flex-col items-center justify-center h-screen">
       {countdownReached ? (
         // Your content when countdown reaches its target
-        <PassCode></PassCode>
+        <Chatbot></Chatbot>
       ) : (
+        // <PassCode></PassCode>
         // Your countdown timer
         <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
           <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
